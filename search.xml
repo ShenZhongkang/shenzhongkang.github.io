@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>使用 concurrently 同时运行多个 npm 命令</title>
+      <link href="/2020/07/30/concurrently/"/>
+      <url>/2020/07/30/concurrently/</url>
+      
+        <content type="html"><![CDATA[<p>我们平时可能需要同时在一个 npm scripts 中运行多个 npm 命令。这时候，我们第一时间想到的 <code>&amp;&amp;</code>，比如 <code>npm run build &amp;&amp; npm start</code>。虽然比较方便，但是很难追踪不同的输出，并且当其中一个进程失败的时候，另外的一个进程仍然在运行。这样就很难排查进程失败的原因是什么。<a href="https://www.npmjs.com/package/concurrently" target="_blank" rel="noopener">concurrently</a> 就可以帮助我们更好的执行脚本。</p><p>你可以全局安装:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g concurrently</span><br></pre></td></tr></table></figure><p>或者作为项目依赖安装:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install concurrently --save</span><br></pre></td></tr></table></figure><p>使用方法:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">concurrently <span class="string">"command1 arg"</span> <span class="string">"command2 arg"</span></span><br></pre></td></tr></table></figure><p>在项目中使用，我们只需要在我们的 npm scripts 里添加一个合并的命令:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"start"</span>: <span class="string">"concurrently \"command1 arg\" \"command2 arg\""</span></span><br></pre></td></tr></table></figure><p>更多文档，详情参考 <a href="https://github.com/kimmobrunfeldt/concurrently#readme" target="_blank" rel="noopener">这里</a>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> FrontEnd </category>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> FrontEnd </tag>
+            
+            <tag> Javascript </tag>
+            
+            <tag> Node </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于react-boilerplate脚手架添加前端代理</title>
       <link href="/2019/09/29/How%20to%20add%20proxy%20middleware%20based%20on%20react-boilerplate/"/>
       <url>/2019/09/29/How%20to%20add%20proxy%20middleware%20based%20on%20react-boilerplate/</url>
